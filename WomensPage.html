@@ -3,288 +3,289 @@
 <head>
 	<meta name="author" content="Ryan Filbey">
 	<meta name="description" content="Assignment8">
-  <link rel="stylesheet" href="WomensPage.css" />
+  <link rel="stylesheet" href="CategoryPage.css" />
     <title>E-Commerce Project</title>
 </head>
 
 <body>
   
-<nav class="navbar">
-<div class="nav">
-    <img src="images/shoazaLogo.png" class="brand-logo" alt="">
+<nav class = "menu">
+<div class="topnav">
+    <img src="images/shoazaLogo.png" class="logo" alt="">
     <div class="nav-items">
-        <div class="search">
-            <input type="text" class="search-box" placeholder="search brand, product">
-            <button class="search-btn">search</button>
+      <div class="search">
+            <input type="text" id = "search" class="search-field" placeholder="search brand, product">
+            <button class="search-button" id = "searchbtn" onclick = "location.href = 'Search.html'" >search</button>
         </div>
         <a href="#"><img src="images/user.png" alt=""></a>
         <a href="#"><img src="images/cart.png" alt=""></a>
     </div>
 </div>
   
-  <ul class="links-container">
-    <li class="link-item"><a href="HomePage.html" class="link">home</a></li>
-    <li class="link-item"><a href="MensPage.html" class="link">mens</a></li>
-    <li class="link-item"><a href="WomensPage.html" class="link">womens</a></li>
-    <li class="link-item"><a href="KidsPage.html" class="link">kids</a></li>
-    <li class="link-item"><a href="Categories.html" class="link">categories</a></li>
-    <li class="link-item"><a href="HomePage.html#topRated" class="link">top rated</a></li>
+  <ul class="links-row">
+    <li class="link-name"><a href="HomePage.html" class="link">home</a></li>
+    <li class="link-name"><a href="MensPage.html" class="link">mens</a></li>
+    <li class="link-name"><a href="WomensPage.html" class="link">womens</a></li>
+    <li class="link-name"><a href="KidsPage.html" class="link">kids</a></li>
+    <li class="link-name"><a href="HomePage.html#topRated" class="link">top rated</a></li>
 </ul>
 </nav>
+  
+  
  
 <section class="product" id = "allWomens">
     <h2 class="product-category">All Womens Shoes</h2>
 
-<div class="product-container">
-    <div class="product-card">
+<div class="product-row">
+    <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class= "product-description" >a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-     <div class="product-card">
+     <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class= "product-description" >a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+     <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class= "product-description" >a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+     <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class= "product-description" >a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+     <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
-  <div class="product-card">
+  <div class="product-display">
         <div class="product-image">
-            <span class="discount-tag">5 Stars</span>
-            <img src="img/card1.png" class="product-thumb" alt="">
-            <button class="card-btn">add to cart</button>
+            <span class="star-rating">5 Stars</span>
+            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
+            <button class="display-button">add to cart</button>
         </div>
         <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the shoe</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
+            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
+            <p class="product-description">a short line about the shoe</p>
+            <span class="price">$20</span>
         </div>
     </div>
  </div>
 </section>
   
   <footer>
-    <div class="footer-content">
-        <img src="images/shoazaLogo.png" class="logo" alt="">
-        <div class="footer-ul-container">
+    <div class="footer-display">
+        <img src="shoazaLogo.png" class="logo" alt="">
+        <div class="footer-links">
             <ul class="category">
-                <li class="category-title">men</li>
+                <li class="category-name">men</li>
                 <li><a href="#" class="footer-link">brand</a></li>
                 <li><a href="#" class="footer-link">brand</a></li>
                 <li><a href="#" class="footer-link">brand</a></li>
@@ -292,7 +293,7 @@
                 <li><a href="#" class="footer-link">brand</a></li>
             </ul>
             <ul class="category">
-                <li class="category-title">women</li>
+                <li class="category-name">women</li>
                 <li><a href="#" class="footer-link">brand</a></li>
                 <li><a href="#" class="footer-link">brand</a></li>
                 <li><a href="#" class="footer-link">brand</a></li>
@@ -300,7 +301,7 @@
                 <li><a href="#" class="footer-link">brand</a></li>
           	</ul>
           <ul class="category">
-                <li class="category-title">kids</li>
+                <li class="category-name">kids</li>
                 <li><a href="#" class="footer-link">brand</a></li>
                 <li><a href="#" class="footer-link">brand</a></li>
                 <li><a href="#" class="footer-link">brand</a></li>
@@ -310,19 +311,18 @@
         </div>
     </div>
     
-    <p class="footer-title">about company</p>
+    <p class="footer-heading">about company</p>
     <p class="info">Info</p>
-    <p class="info">support emails - help@shoaza.com, customersupport@shoaza.com</p>
-    <p class="info">telephone</p>
-    <div class="footer-social-container">
+    <p class="info">support email: customersupport@shoaza.com</p>
+    <p class="info">phone: </p>
+    <div class="footer-other-links">
         <div>
-            <a href="#" class="social-link">terms & services</a>
-            <a href="#" class="social-link">privacy page</a>
+            <a href="#" class="sitemap-link">sitemap</a>
         </div>
     </div>
-    <p class="footer-credit">Shoaza online store</p>
+    <p class="footer-ending">Shoaza online store</p>
 </footer>
 
 </body>
-  
+  <script src = "Search.js" ></script>
 </html>
