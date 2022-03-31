@@ -5,22 +5,22 @@
     font-family: 'roboto', sans-serif;
 }
 
-.navbar{
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #f5f5f5;
-    z-index: 9;
+.menu{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #CCE5FF;
+  z-index: 9;
 }
 
-.nav{
+.topnav{
     padding: 10px 10vw;
     display: flex;
     justify-content: space-between;
 }
 
-.brand-logo{
+.logo{
     height: 60px;
 }
 
@@ -34,7 +34,7 @@
     display: flex;
 }
 
-.search-box{
+.search-field{
     width: 80%;
     height: 40px;
     padding: 10px;
@@ -47,7 +47,7 @@
     outline: none;
 }
 
-.search-btn{
+.search-button{
     width: 20%;
     height: 40px;
     padding: 10px 20px;
@@ -62,7 +62,7 @@
     border-bottom-right-radius: 10px;
 }
 
-.search-box::placeholder{
+.search-field::placeholder{
     color: #a9a9a9;
 }
 
@@ -74,7 +74,7 @@
     width: 30px;
 }
 
-.links-container{
+.links-row{
     width: 100%;
     display: flex;
     padding: 10px 10vw;
@@ -97,139 +97,87 @@
     opacity: 1;
 }
 
-.product{
-    position: relative;
-    overflow: hidden;
-    padding: 20px 0;
-}
 
-.product-category{
-    padding: 0 10vw;
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 40px;
-    text-transform: capitalize;
-}
 
-.product-container{
-    padding: 0 10vw;
+
+.product-details{
+    width: 100%;
+    padding: 60px 10vw;
     display: flex;
-  	flex-wrap: wrap;
-    flex-direction: row;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    justify-content: space-between;
 }
 
-/*.product-container::-webkit-scrollbar{
-    display: none;
-}*/
-
-.product-card{
-    flex: 1 1 auto;
-    width: 250px;
-    height: 450px;
-    margin-right: 40px;
-}
-
-.product-image{
+.image-slider{
+    width: 500px;
+    height: 500px;
     position: relative;
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
+    background-image: url('shoeIcon.png');
+    background-size: cover;
 }
 
-.product-thumb{
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
+.details{
+    width: 50%;
 }
 
-.discount-tag{
-    position: absolute;
-    background: #fff;
-    padding: 5px;
+.details .product-brand{
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+.details .product-short-des{
+    font-size: 25px;
+    line-height: 30px;
+    height: auto;
+    margin: 15px 0 30px;
+}
+
+.product-price{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.cart-button{
+    margin-right: 2%;
+    background: #383838;
+    color: #fff;
+    width: 48%;
+    padding: 20px;
     border-radius: 5px;
-    color: #ff7d7d;
-    right: 10px;
-    top: 10px;
-    text-transform: capitalize;
-}
-
-.card-btn{
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px;
-    width: 90%;
-    text-transform: capitalize;
-    border: none;
-    outline: none;
-    background: #fff;
-    border-radius: 5px;
-    transition: 0.5s;
-    cursor: pointer;
-    opacity: 0;
-}
-
-.product-card:hover .card-btn{
-    opacity: 1;
-}
-
-.card-btn:hover{
-    background: #efefef;
-}
-
-.product-info{
-    width: 100%;
-    height: 100px;
-    padding-top: 10px;
-}
-
-.product-brand{
-    text-transform: uppercase;
-}
-
-.product-short-des{
-    width: 100%;
-    height: 20px;
-    line-height: 20px;
-    overflow: hidden;
-    opacity: 0.5;
-    text-transform: capitalize;
-    margin: 5px 0;
-}
-
-.price{
-    font-weight: 900;
+    border: 1px solid #383838;
     font-size: 20px;
+    cursor: pointer;
+    margin: 20px 0;
+    text-transform: capitalize;
 }
 
-.actual-price{
-    margin-left: 20px;
-    opacity: 0.5;
-    text-decoration: line-through;
+.star-rating{
+    padding: 5px;
+  color: #ff7d7d;
+  text-transform: capitalize;
+  font-size: 20px;
 }
+
+
 
 footer{
     position: relative;
     width: 100%;
     padding: 40px 10vw;
     padding-bottom: 80px;
-    background: #383838;
+    background: #FFB266;
 }
 
-.footer-content{
+.footer-display{
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-.footer-content .logo{
+.footer-display .logo{
     height: 160px;
 }
 
-.footer-ul-container{
+.footer-links{
     width: 45%;
     display: flex;
     justify-content: space-between;
@@ -243,7 +191,7 @@ footer{
     list-style: none;
 }
 
-.category-title{
+.category-name{
     grid-column: span 2;
     text-transform: capitalize;
     color: #fff;
@@ -261,34 +209,34 @@ footer{
     color: #fff;
 }
 
-.footer-title, .info{
+.footer-heading, .info{
     color: rgba(255, 255, 255, 0.75);
     margin: 20px 0;
     text-transform: capitalize;
 }
 
-.footer-title{
+.footer-heading{
     margin-top: 80px;
     color: #fff;
 }
 
-.footer-social-container{
+.footer-other-links{
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
 }
 
-.social-link{
+.sitemap-link{
     color: #fff;
     margin-left: 20px;
     text-transform: capitalize;
 }
 
-.social-link:nth-child(1){
+.sitemap-link:nth-child(1){
     margin-left: 0;
 }
 
-.footer-credit{
+.footer-ending{
     width: 100%;
     padding: 10px;
     position: absolute;
