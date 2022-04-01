@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta name="author" content="Ryan Filbey">
 	<meta name="description" content="Assignment8">
@@ -22,12 +22,12 @@
     </div>
 </div>
   
-  <ul class="links-row">
-    <li class="link-name"><a href="HomePage.html" class="link">home</a></li>
-    <li class="link-name"><a href="MensPage.html" class="link">mens</a></li>
-    <li class="link-name"><a href="WomensPage.html" class="link">womens</a></li>
-    <li class="link-name"><a href="KidsPage.html" class="link">kids</a></li>
-    <li class="link-name"><a href="HomePage.html#topRated" class="link">top rated</a></li>
+<ul class="links-row">
+    <li class="link-name"><a href="HomePage.php" class="link">home</a></li>
+    <li class="link-name"><a href="MensPage.php" class="link">mens</a></li>
+    <li class="link-name"><a href="WomensPage.php" class="link">womens</a></li>
+    <li class="link-name"><a href="KidsPage.php" class="link">kids</a></li>
+    <li class="link-name"><a href="HomePage.php#topRated" class="link">top rated</a></li>
 </ul>
 </nav>
   
@@ -102,7 +102,7 @@
     </div>
     <p class="footer-ending">Shoaza online store</p>
 </footer>
-
+<script src = "Search.js" ></script>
 </body>
-  <script src = "Search.js" ></script>
+  
 </html>
