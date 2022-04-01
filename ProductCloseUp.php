@@ -3,7 +3,7 @@
 <head>
 	<meta name="author" content="Ryan Filbey">
 	<meta name="description" content="Assignment8">
-  <link rel="stylesheet" href="CategoryPage.css" />
+  <link rel="stylesheet" href="ProductCloseUp.css" />
     <title>E-Commerce Project</title>
 </head>
 
@@ -11,61 +11,53 @@
   
 <nav class = "menu">
 <div class="topnav">
-    <img src="images/shoazaLogo.png" class="logo" alt="">
+    <img src="shoazaLogo.png" class="logo" alt="">
     <div class="nav-items">
       <div class="search">
             <input type="text" id = "search" class="search-field" placeholder="search brand, product">
             <button class="search-button" id = "searchbtn" onclick = "location.href = 'Search.html'" >search</button>
         </div>
-        <a href="#"><img src="images/user.png" alt=""></a>
-        <a href="#"><img src="images/cart.png" alt=""></a>
+        <a href="#"><img src="user.png" alt=""></a>
+        <a href="#"><img src="cart.png" alt=""></a>
     </div>
 </div>
   
-<ul class="links-row">
-      <li class="link-name"><a href="HomePage.html" class="link">home</a></li>
-      <li class="link-name"><a href="MensPage.php" class="link">mens</a></li>
-      <li class="link-name"><a href="WomensPage.php" class="link">womens</a></li>
-      <li class="link-name"><a href="KidsPage.php" class="link">kids</a></li>
-      <li class="link-name"><a href="HomePage.html#topRated" class="link">top rated</a></li>
+  <ul class="links-row">
+    <li class="link-name"><a href="HomePage.html" class="link">home</a></li>
+    <li class="link-name"><a href="MensPage.html" class="link">mens</a></li>
+    <li class="link-name"><a href="WomensPage.html" class="link">womens</a></li>
+    <li class="link-name"><a href="KidsPage.html" class="link">kids</a></li>
+    <li class="link-name"><a href="HomePage.html#topRated" class="link">top rated</a></li>
 </ul>
 </nav>
   
-  
- 
-<section class="product" id = "allWomens">
-    <h2 class="product-category">All Womens Shoes</h2>
-
-<div class="product-row">
-
-<?php 
-        include_once "connect-db.php";
+  <section class="product-details">
+    <?php 
+    include_once "connect-db.php";
+    //retrieve the item from the DB using the itemID passed via GET in the URL
+    if (isset($_GET['itemID'])) {
+      $sql_select = "SELECT * FROM `Items` WHERE `itemID` = " .  $_GET['itemID'] . ";" ;
+      $result = $conn->query($sql_select);
+      $row =[];
+      if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        echo '<img src="' . $row["img_path"] .'" class="image-slider" alt="">';
+      }
+    ?>
+    <div class="details">
+    <?php 
+      if ($result->num_rows > 0) {
+        echo '<h2 class="product-brand">' . $row["name"] .'</h2>
+          <p class="product-short-des">' . $row["details"] . '</p>
+          <span class="product-price">$' . $row["price"] . '</span><br><br>
+          <span class="star-rating">5 Stars</span><br>
+          <button class="cart-button">add to cart</button>';
+      }
+    }
+    $conn->close();
+    ?>
         
-        $sql_select = "SELECT * FROM `Items` WHERE `category` = \"Women\'s\";";
-        $result = $conn->query($sql_select);
-        //echo $conn->query($sql_select);
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-
-                echo '<div class="product-display">
-                <div class="product-image">
-                    <span class="star-rating">5 Stars</span>
-                    <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><img src="' . $row["img_path"] .'" class="product-pic" alt=""></a>
-                    <button class="display-button">add to cart</button>
-                </div>
-                <div class="product-info">
-                <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><h2 class="product-brand">' . $row["brand"] . '</h2></a>
-                    <p class= "product-name">' . $row["name"] .'</p>
-                    <span class="price">$'. $row["price"] .'</span>
-                </div>
-            </div>';
-            }
-        }
-        $conn->close();
-        
-        ?>
-    
- </div>
+    </div>
 </section>
   
   <footer>

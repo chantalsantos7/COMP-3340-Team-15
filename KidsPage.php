@@ -3,7 +3,7 @@
 <head>
 	<meta name="author" content="Ryan Filbey">
 	<meta name="description" content="Assignment8">
-  <link rel="stylesheet" href="ProductCloseUp.css" />
+  <link rel="stylesheet" href="CategoryPage.css" />
     <title>E-Commerce Project</title>
 </head>
 
@@ -11,35 +11,55 @@
   
 <nav class = "menu">
 <div class="topnav">
-    <img src="shoazaLogo.png" class="logo" alt="">
+    <img src="images/shoazaLogo.png" class="logo" alt="">
     <div class="nav-items">
       <div class="search">
             <input type="text" id = "search" class="search-field" placeholder="search brand, product">
             <button class="search-button" id = "searchbtn" onclick = "location.href = 'Search.html'" >search</button>
         </div>
-        <a href="#"><img src="user.png" alt=""></a>
-        <a href="#"><img src="cart.png" alt=""></a>
+        <a href="#"><img src="images/user.png" alt=""></a>
+        <a href="#"><img src="images/cart.png" alt=""></a>
     </div>
 </div>
   
-  <ul class="links-row">
+<ul class="links-row">
     <li class="link-name"><a href="HomePage.html" class="link">home</a></li>
-    <li class="link-name"><a href="MensPage.html" class="link">mens</a></li>
-    <li class="link-name"><a href="WomensPage.html" class="link">womens</a></li>
-    <li class="link-name"><a href="KidsPage.html" class="link">kids</a></li>
+    <li class="link-name"><a href="MensPage.php" class="link">mens</a></li>
+    <li class="link-name"><a href="WomensPage.php" class="link">womens</a></li>
+    <li class="link-name"><a href="KidsPage.php" class="link">kids</a></li>
     <li class="link-name"><a href="HomePage.html#topRated" class="link">top rated</a></li>
 </ul>
 </nav>
-  
-  <section class="product-details">
-    <div class="image-slider"></div>
-    
-    <div class="details">
-        <h2 class="product-brand">Shoe Name</h2>
-        <p class="product-short-des">Detailed description about shoe</p>
-        <span class="product-price">$20</span><br><br>
-        <span class="star-rating">5 Stars</span><br>
-      	<button class="cart-button">add to cart</button>
+
+<section class="product" id = "allKids">
+    <h2 class="product-category">All Kids Shoes</h2>
+
+    <div class="product-row">
+
+    <?php 
+    include_once "connect-db.php";
+    $sql_select = "SELECT * FROM `Items` WHERE `category` = \"Kids\'\";";
+    $result = $conn->query($sql_select);
+            //echo $conn->query($sql_select);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="product-display">
+                    <div class="product-image">
+                        <span class="star-rating">5 Stars</span>
+                        <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><img src="' . $row["img_path"] .'" class="product-pic" alt=""></a>
+                        <button class="display-button">add to cart</button>
+                    </div>
+                    <div class="product-info">
+                    <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><h2 class="product-brand">' . $row["brand"] . '</h2></a>
+                        <p class= "product-name">' . $row["name"] .'</p>
+                        <span class="price">$'. $row["price"] .'</span>
+                    </div>
+                </div>';
+                }
+            }
+            $conn->close();
+            
+            ?>
     </div>
 </section>
   

@@ -33,17 +33,15 @@
   
   
  
-<section class="product" id = "allWomens">
-    <h2 class="product-category">All Womens Shoes</h2>
+<section class="product" id = "allMens">
+    <h2 class="product-category">All Mens Shoes</h2>
 
 <div class="product-row">
-
 <?php 
         include_once "connect-db.php";
         
-        $sql_select = "SELECT * FROM `Items` WHERE `category` = \"Women\'s\";";
+        $sql_select = "SELECT * FROM `Items` WHERE `category` = \"Men\'s\";";
         $result = $conn->query($sql_select);
-        //echo $conn->query($sql_select);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
 
@@ -64,7 +62,6 @@
         $conn->close();
         
         ?>
-    
  </div>
 </section>
   
