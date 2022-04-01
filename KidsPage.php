@@ -3,7 +3,11 @@
 <head>
 	<meta name="author" content="Ryan Filbey">
 	<meta name="description" content="Assignment8">
+	<meta name="keywords" content="Shoaza, Kidspage, Shoes, Store, Top, Rated, kids, Page">
   <link rel="stylesheet" href="CategoryPage.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src = "AddToCartButton.js" ></script>
+  <script src = "navCartImage.js" ></script>
     <title>E-Commerce Project</title>
 </head>
 
@@ -17,8 +21,8 @@
             <input type="text" id = "search" class="search-field" placeholder="search brand, product">
             <button class="search-button" id = "searchbtn" onclick = "location.href = 'Search.html'" >search</button>
         </div>
-        <a href="#"><img src="images/user.png" alt=""></a>
-        <a href="#"><img src="images/cart.png" alt=""></a>
+        <a href="UserAccount.php"><img src="user.png" alt=""></a>
+        <a href="#" onclick = "navCartImage()" ><img src="cart.png" alt=""></a>
     </div>
 </div>
   
@@ -31,6 +35,11 @@
 </ul>
 </nav>
 
+<?php
+include("Authority.php");
+    $auth = $authLevel;
+?>
+	
 <section class="product" id = "allKids">
     <h2 class="product-category">All Kids Shoes</h2>
 
@@ -47,7 +56,7 @@
                     <div class="product-image">
                         <span class="star-rating">5 Stars</span>
                         <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><img src="' . $row["img_path"] .'" class="product-pic" alt=""></a>
-                        <button class="display-button">add to cart</button>
+                        <button class="display-button" onclick = "addToCartButton()">add to cart</button>
                     </div>
                     <div class="product-info">
                     <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><h2 class="product-brand">' . $row["brand"] . '</h2></a>
@@ -105,6 +114,7 @@
     </div>
     <p class="footer-ending">Shoaza online store</p>
 </footer>
+<input type="hidden" id="myPhpValue" value="<?php echo $auth ?>" />
 <script src = "Search.js" ></script>
 </body>
   
