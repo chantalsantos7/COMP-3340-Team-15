@@ -7,17 +7,17 @@
 </head>
 <body>
 <?php
-    require('connectDB.php');
+    require('connect-db.php');
     if (isset($_REQUEST['username'])) {
         $username = stripslashes($_REQUEST['username']);
-        $username = mysqli_real_escape_string($con, $username);
+        $username = mysqli_real_escape_string($conn, $username);
         $email    = stripslashes($_REQUEST['email']);
-        $email    = mysqli_real_escape_string($con, $email);
+        $email    = mysqli_real_escape_string($conn, $email);
         $password = stripslashes($_REQUEST['password']);
-        $password = mysqli_real_escape_string($con, $password);
+        $password = mysqli_real_escape_string($conn, $password);
         $query    = "INSERT into REG_USERS (username, password, email)
                      VALUES ('$username', '$password', '$email')";
-        $result   = mysqli_query($con, $query);
+        $result   = mysqli_query($conn, $query);
         if ($result) {
             echo "<div class='form'>
                   <h3>Registration successful</h3><br/>
