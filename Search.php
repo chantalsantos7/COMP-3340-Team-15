@@ -3,7 +3,11 @@
 <head>
 	<meta name="author" content="Ryan Filbey">
 	<meta name="description" content="Assignment8">
+	<meta name="keywords" content="Shoaza, searchPage, Mens, Womens, Kids, Shoes, Store, Top, Rated, search, Page">
   <link rel="stylesheet" href="SearchPage.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src = "AddToCartButton.js" ></script>
+  <script src = "navCartImage.js" ></script>
     <title>E-Commerce Project</title>
 </head>
 
@@ -15,19 +19,19 @@
     <div class="nav-items">
       <div class="search">
             <input type="text" id = "search" class="search-field" placeholder="search brand, product">
-            <button class="search-button" id = "searchbtn" onclick = "location.href = 'Search.html'" >search</button>
+            <button class="search-button" id = "searchbtn" onclick = "location.href = 'Search.php'" >search</button>
         </div>
-        <a href="#"><img src="user.png" alt=""></a>
-        <a href="#"><img src="cart.png" alt=""></a>
+        <a href="UserAccount.php"><img src="user.png" alt=""></a>
+        <a href="#" onclick = "navCartImage()" ><img src="cart.png" alt=""></a>
     </div>
 </div>
   
   <ul class="links-row">
-    <li class="link-name"><a href="HomePage.html" class="link">home</a></li>
-    <li class="link-name"><a href="MensPage.html" class="link">mens</a></li>
-    <li class="link-name"><a href="WomensPage.html" class="link">womens</a></li>
-    <li class="link-name"><a href="KidsPage.html" class="link">kids</a></li>
-    <li class="link-name"><a href="HomePage.html#topRated" class="link">top rated</a></li>
+    <li class="link-name"><a href="HomePage.php" class="link">home</a></li>
+    <li class="link-name"><a href="MensPage.php" class="link">mens</a></li>
+    <li class="link-name"><a href="WomensPage.php" class="link">womens</a></li>
+    <li class="link-name"><a href="KidsPage.php" class="link">kids</a></li>
+    <li class="link-name"><a href="HomePage.php#topRated" class="link">top rated</a></li>
 </ul>
 </nav>
   
@@ -94,7 +98,8 @@
     </div>
     <p class="footer-ending">Shoaza online store</p>
 </footer>
-
+<script src = "Search.js" ></script>
+<input type="hidden" id="myPhpValue" value="<?php echo $auth ?>" />
 </body>
-  <script src = "Search.js" ></script>
+  
 </html>
