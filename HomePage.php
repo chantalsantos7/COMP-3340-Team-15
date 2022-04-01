@@ -3,11 +3,20 @@
 <head>
 	<meta name="author" content="Ryan Filbey">
 	<meta name="description" content="Assignment8">
+	<meta name="keywords" content="Shoaza, HomePage, Mens, Womens, Kids, Shoes, Store, Top, Rated, Home, Page">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src = "AddToCartButton.js" ></script>
+  <script src = "navCartImage.js" ></script>
   <link rel="stylesheet" href="HomePage.css" />
     <title>E-Commerce Project</title>
 </head>
 
 <body>
+
+<?php
+include("Authority.php");
+    $auth = $authLevel;
+?>	
   
 <nav class = "menu">
 <div class="topnav">
@@ -15,10 +24,10 @@
     <div class="nav-items">
       <div class="search">
             <input type="text" id = "search" class="search-field" placeholder="search brand, product">
-            <button class="search-button" id = "searchbtn" onclick = "location.href = 'Search.html'" >search</button>
+            <button class="search-button" id = "searchbtn" onclick = "location.href = 'Search.php'" >search</button>
         </div>
-        <a href="#"><img src="images/user.png" alt=""></a>
-        <a href="#"><img src="images/cart.png" alt=""></a>
+        <a href="UserAccount.php"><img src="user.png" alt=""></a>
+        <a href="#" onclick = "navCartImage()" ><img src="cart.png" alt=""></a>
     </div>
 </div>
   
@@ -55,7 +64,7 @@ if ($result->num_rows > 0) {
                 <div class="product-image">
                     <span class="star-rating">5 Stars</span>
                     <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><img src="' . $row["img_path"] .'" class="product-pic" alt=""></a>
-                    <button class="display-button">add to cart</button>
+                    <button class="display-button" onclick = "addToCartButton()">add to cart</button>
                 </div>
                 <div class="product-info">
                 <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><h2 class="product-brand">' . $row["brand"] . '</h2></a>
@@ -85,7 +94,7 @@ if ($result->num_rows > 0) {
                 <div class="product-image">
                     <span class="star-rating">5 Stars</span>
                     <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><img src="' . $row["img_path"] .'" class="product-pic" alt=""></a>
-                    <button class="display-button">add to cart</button>
+                    <button class="display-button" onclick = "addToCartButton()">add to cart</button>
                 </div>
                 <div class="product-info">
                 <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><h2 class="product-brand">' . $row["brand"] . '</h2></a>
@@ -115,7 +124,7 @@ if ($result->num_rows > 0) {
                 <div class="product-image">
                     <span class="star-rating">5 Stars</span>
                     <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><img src="' . $row["img_path"] .'" class="product-pic" alt=""></a>
-                    <button class="display-button">add to cart</button>
+                    <button class="display-button" onclick = "addToCartButton()">add to cart</button>
                 </div>
                 <div class="product-info">
                 <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><h2 class="product-brand">' . $row["brand"] . '</h2></a>
@@ -172,6 +181,7 @@ $conn->close();
     </div>
     <p class="footer-ending">Shoaza online store</p>
 </footer>
+<input type="hidden" id="myPhpValue" value="<?php echo $auth ?>" />	
 <script src = "Search.js" ></script>
 </body>
   
