@@ -7,23 +7,22 @@
 </head>
 <body>
 <?php
-    require('connectDB.php');
+    require('connect-db.php');
     session_start();
     if (isset($_POST['username'])) {
         $username = stripslashes($_REQUEST['username']);  
-        $username = mysqli_real_escape_string($con, $username);
+        $username = mysqli_real_escape_string($conn, $username);
         $password = stripslashes($_REQUEST['password']);
-        $password = mysqli_real_escape_string($con, $password);
+        $password = mysqli_real_escape_string($conn, $password);
  
         $query    = "SELECT * FROM REG_USERS WHERE username='$username'
                      AND password='$password'";
-        $result = mysqli_query($con, $query) or die(mysql_error());
+        $result = mysqli_query($conn, $query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
             $_SESSION['username'] = $username;
             $data = mysqli_fetch_array($result, MYSQLI_ASSOC);
             $_SESSION['email'] = $data['email'];
-          $_SESSION['cart'] = [];
 
             header("Location: HomePage.php");
         } else {
