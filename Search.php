@@ -34,7 +34,11 @@
     <li class="link-name"><a href="HomePage.php#topRated" class="link">top rated</a></li>
 </ul>
 </nav>
-  
+	
+<?php
+include("Authority.php");
+    $auth = $authLevel;
+?>  
   
  
 <section class="product" id = "ProductSearch">
