@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta name="author" content="Ryan Filbey">
 	<meta name="description" content="Assignment8">
@@ -14,17 +14,10 @@
 <body>
   
 <nav class = "menu">
-<div class="topnav">
-    <img src="shoazaLogo.png" class="logo" alt="">
-    <div class="nav-items">
-      <div class="search">
-            <input type="text" id = "search" class="search-field" placeholder="search brand, product">
-            <button class="search-button" id = "searchbtn" onclick = "location.href = 'Search.php'" >search</button>
-        </div>
-        <a href="UserAccount.php"><img src="user.png" alt=""></a>
-        <a href="#" onclick = "navCartImage()" ><img src="cart.png" alt=""></a>
-    </div>
-</div>
+  <?php 
+  include("topNavMenu.php");
+  ?>
+</nav>
   
   <ul class="links-row">
     <li class="link-name"><a href="HomePage.php" class="link">home</a></li>

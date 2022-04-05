@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta name="author" content="Ryan Filbey">
   	<meta name="description" content="Shoaza online shoe store Kids Page">
@@ -16,39 +16,23 @@
 <body>
   
 <nav class = "menu">
-<div class="topnav">
-    <img src="shoazaLogo.png" class="logo" alt="">
-    <div class="nav-items">
-      <div class="search">
-            <input type="text" id = "search" class="search-field" placeholder="search brand, product">
-            <button class="search-button" id = "searchbtn" onclick = "location.href = 'Search.php'" >search</button>
-        </div>
-        <a href="UserAccount.php"><img src="user.png" alt=""></a>
-        <a href="#" onclick = "navCartImage()" ><img src="cart.png" alt=""></a>
-    </div>
-</div>
-  
-  <ul class="links-row">
-    <li class="link-name"><a href="HomePage.php" class="link">home</a></li>
-    <li class="link-name"><a href="MensPage.php" class="link">mens</a></li>
-    <li class="link-name"><a href="WomensPage.php" class="link">womens</a></li>
-    <li class="link-name"><a href="KidsPage.php" class="link">kids</a></li>
-    <li class="link-name"><a href="HomePage.php#topRated" class="link">top rated</a></li>
-</ul>
+  <?php 
+  include("topNavMenu.php");
+  ?>
 </nav>
   
   <?php
 include("Authority.php");
   $auth = $authLevel;
   
-  if($authLevel == 1){
+  if($authLevel == 1){ //appears when the user is not logged in, prompting them to login or create an account
   echo '<section class="product" id = "Account-nav">  
    <h1 class ="product-category">My Account</h1> 
   <a href = "LoginPage.php"><h2 class ="product-category">Login To My Account</h2></a> 
    <a href = "register.php"><h2 class ="product-category">Register a New Account</h2></a> 
    </section>';
   }
-  else if($authLevel == 2){
+  else if($authLevel == 2){ //appears for logged in customers
     echo '<section class="product" id = "Account-nav"> 
    <h1 class ="product-category">My Account</h1>
    <h1 class ="product-category" style = "color:orange"><b>Username: </b></h1>';
@@ -61,7 +45,7 @@ include("Authority.php");
    </section>';
   }
   
-  else if($authLevel == 3){
+  else if($authLevel == 3){ //admin level account page - has links for the admin to add a product, and monitor whether the site's features are up
     echo '<section class="product" id = "Account-nav"> 
    <h1 class ="product-category">Admin Level Account</h1>
    <h1 class ="product-category" style = "color:orange"><b>Username: </b></h1>';
@@ -69,15 +53,15 @@ include("Authority.php");
    echo '<h1 class ="product-category" style = "color:orange"><b>Email: </b></h1>';
    echo "<h1 class ='product-category'>" . $_SESSION["email"] ."</h1>";
    echo '<a href = "AdminAddProduct.php" style = "color:orange"><h2 class ="product-category">Add/Edit Product</h2></a>
-   <a href = "Active orders.php" style = "color:orange"><h2 class ="product-category">View all orders</h2></a>
+
+   <a href = "ActiveOrders.php" style = "color:orange"><h2 class ="product-category">View all orders</h2></a>
    <a href = "Cart.php" style = "color:orange"><h2 class ="product-category">Cart</h2></a>
+   <!-- link to the monitoring page, to check whether the backend site features are down -->
+   <a href="monitoringpage.php" style = "color:orange">Monitor Site Features</a>
    <a href = "logout.php" style = "color:orange"><h2 class ="product-category">Logout</h2></a>
-   </section>';
+   </section>'; 
   }
 ?>
-  
-  
-  
   <footer>
     <div class="footer-display">
         <img src="shoazaLogo.png" class="logo" alt="">

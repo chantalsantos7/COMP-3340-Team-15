@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <title>Registration</title>
@@ -9,6 +9,10 @@
 <?php
     require('connect-db.php');
     if (isset($_REQUEST['username'])) {
+        $fname = stripslashes($_REQUEST['fname']);
+        $fname = mysqli_real_escape_string($conn, $fname);
+        $lname = stripslashes($_REQUEST['lname']);
+        $lname = mysqli_real_escape_string($conn, $lname);
         $username = stripslashes($_REQUEST['username']);
         $username = mysqli_real_escape_string($conn, $username);
         $email    = stripslashes($_REQUEST['email']);
@@ -17,7 +21,8 @@
         $password = mysqli_real_escape_string($conn, $password);
         $query    = "INSERT into REG_USERS (username, password, email)
                      VALUES ('$username', '$password', '$email')";
-        $result   = mysqli_query($conn, $query);
+        $sql_query = "INSERT INTO `UserDetails`(`firstName`, `lastName`, `email`, `password`, `username`) VALUES ('$fname','$lname','$email','$password', '$username')";             
+        $result   = mysqli_query($conn, $sql_query);
         if ($result) {
             echo "<div class='form'>
                   <h3>Registration successful</h3><br/>
@@ -30,10 +35,12 @@
         }
     } 
 ?>
-    <form class="form" action="" method="post">
+    <form class="form" action="register.php" method="post">
         <h1 class="login-header">Registration</h1>
-        <input type="text" class="login-input" name="username" placeholder="Username" required />
-        <input type="text" class="login-input" name="email" placeholder="Email Adress" required>
+        <input type="text" class="login-input" name="fname" id="fname" placeholder="First Name" required>
+        <input type="text" class="login-input" name="lname" id="lname" placeholder="Last Name" required>
+        <input type="text" class="login-input" name="username" placeholder="Username" required>
+        <input type="text" class="login-input" name="email" placeholder="Email Address" required>
         <input type="password" class="login-input" name="password" placeholder="Password" required>
         <input type="submit" name="submit" value="Register" class="login-button">
         <p class="link">Already a user? <a href="LoginPage.php">Click to Login</a></p>

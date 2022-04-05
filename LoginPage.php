@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <title>Login</title>
@@ -15,9 +15,9 @@
         $password = stripslashes($_REQUEST['password']);
         $password = mysqli_real_escape_string($conn, $password);
  
-        $query    = "SELECT * FROM REG_USERS WHERE username='$username'
+        $query    = "SELECT * FROM UserDetails WHERE username='$username'
                      AND password='$password'";
-        $result = mysqli_query($conn, $query) or die(mysql_error());
+        $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
             $_SESSION['username'] = $username;
