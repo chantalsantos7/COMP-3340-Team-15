@@ -13,7 +13,7 @@
 
 <body>
   
-<nav class = "menu">
+<nav class = "menu" id = "menu">
 <div class="topnav">
     <img src="images/shoazaLogo.png" class="logo" alt="">
     <div class="nav-items">
@@ -72,7 +72,7 @@ include("Authority.php");
     </div>
 </section>
   
-  <footer>
+  <footer id = "foot">
     <div class="footer-display">
         <img src="shoazaLogo.png" class="logo" alt="">
         <div class="footer-links">
@@ -115,6 +115,7 @@ include("Authority.php");
     <p class="footer-ending">Shoaza online store</p>
 </footer>
 <input type="hidden" id="myPhpValue" value="<?php echo $auth ?>" />
+<script src = "RetrieveLayoutTheme.js" ></script>
 <script src = "Search.js" ></script>
 </body>
   
