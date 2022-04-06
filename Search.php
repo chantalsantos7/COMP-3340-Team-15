@@ -13,7 +13,7 @@
 
 <body>
   
-<nav class = "menu">
+<nav class = id = "menu">
   <?php 
   include("topNavMenu.php");
   ?>
@@ -59,27 +59,14 @@ include("Authority.php");
         <div class="footer-links">
             <ul class="category">
                 <li class="category-name">men</li>
-                <li><a href="#" class="footer-link">brand</a></li>
-                <li><a href="#" class="footer-link">brand</a></li>
-                <li><a href="#" class="footer-link">brand</a></li>
-                <li><a href="#" class="footer-link">brand</a></li>
-                <li><a href="#" class="footer-link">brand</a></li>
             </ul>
             <ul class="category">
                 <li class="category-name">women</li>
-                <li><a href="#" class="footer-link">brand</a></li>
-                <li><a href="#" class="footer-link">brand</a></li>
-                <li><a href="#" class="footer-link">brand</a></li>
-                <li><a href="#" class="footer-link">brand</a></li>
-                <li><a href="#" class="footer-link">brand</a></li>
+  
           	</ul>
           <ul class="category">
                 <li class="category-name">kids</li>
-                <li><a href="#" class="footer-link">brand</a></li>
-                <li><a href="#" class="footer-link">brand</a></li>
-                <li><a href="#" class="footer-link">brand</a></li>
-                <li><a href="#" class="footer-link">brand</a></li>
-                <li><a href="#" class="footer-link">brand</a></li>
+   
             </ul>
         </div>
     </div>
@@ -90,7 +77,7 @@ include("Authority.php");
     <p class="info">phone: </p>
     <div class="footer-other-links">
         <div>
-            <a href="#" class="sitemap-link">sitemap</a>
+            <a href="sitemap.html" class="sitemap-link">sitemap</a>
         </div>
     </div>
     <p class="footer-ending">Shoaza online store</p>
