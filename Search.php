@@ -54,18 +54,6 @@ $sql_select = "SELECT * FROM `Items` WHERE `brand` = \"$search\";";
         }
         $conn->close();
 ?> 
-    <div class="product-display">
-        <div class="product-image">
-            <span class="star-rating">5 Stars</span>
-            <a href="ProductCloseUp.html"><img src="img/card1.png" class="product-pic" alt=""></a>
-            <button class="display-button">add to cart</button>
-        </div>
-        <div class="product-info">
-            <a href="ProductCloseUp.html"><h2 class="product-name">brand</h2></a>
-            <p class= "product-description" >a short line about the shoe</p>
-            <span class="price">$20</span>
-        </div>
-    </div>
  </div>
 </section>
   

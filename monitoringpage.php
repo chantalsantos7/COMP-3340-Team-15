@@ -27,7 +27,7 @@
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
-        echo "<p>Status: down</p>";
+        echo "<p >Status: down</p>";
     } else {
         echo "<p>Status: online</p>";
     }
