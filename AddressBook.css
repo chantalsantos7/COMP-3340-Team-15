@@ -1,0 +1,40 @@
+.headings{
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+/* .form-label {
+    padding: 0 10vw;
+    font-size: 15px;
+    font-weight: 200;
+} */
+
+#address-form {
+    background-color: whitesmoke;
+    padding: 0;
+    margin: 0 10vw;
+    border-radius: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em;
+}
+
+.form-row > label {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+  }
+
+.form-row > input, .form-row > textarea {
+    flex: 2;
+}
+
+.form-row > input, .form-row > input[type=submit], .form-row > input[type=button], .form-row > textarea {
+    padding: .5em;
+}
+

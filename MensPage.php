@@ -42,6 +42,7 @@ include("Authority.php");
                     <span class="star-rating">5 Stars</span>
                     <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><img src="' . $row["img_path"] .'" class="product-pic" alt=""></a>
                     <button class="display-button" onclick = "addToCartButton()">add to cart</button>
+                    <input type="hidden" name="itemID" value=' . $row["itemID"] . '>
                 </div>
                 <div class="product-info">
                 <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><h2 class="product-brand">' . $row["brand"] . '</h2></a>
@@ -54,6 +55,8 @@ include("Authority.php");
         $conn->close();
         
         ?>
+
+        
  </div>
 </section>
   
@@ -99,7 +102,7 @@ include("Authority.php");
     </div>
     <p class="footer-ending">Shoaza online store</p>
 </footer>
-<input type="hidden" id="myPhpValue" value="<?php echo $auth ?>" />
+<input type="hidden" id="myPhpValue" value="<?php echo $auth; ?>" />
 <script src = "Search.js" ></script>
 <script src = "RetrieveLayoutTheme.js" ></script>
 </body>
