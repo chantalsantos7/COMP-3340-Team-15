@@ -40,9 +40,10 @@ include("Authority.php");
    echo '<h1 class ="product-category" style = "color:orange"><b>Email: </b></h1>';
    echo "<h1 class ='product-category'>" . $_SESSION["email"] ."</h1>";
    echo '<a href = "Cart.php" style = "color:orange"><h2 class ="product-category">My Cart</h2></a>
+   <!--<a href = "AddressBook.php" style = "color:orange"><h2 class ="product-category">Add Shipping Address</h2></a>-->
    <a href = "checkout.php" style = "color:orange"><h2 class ="product-category">Checkout</h2></a>
    <a href = "logout.php" style = "color:orange"><h2 class ="product-category">Logout</h2></a>
-   <a href = "UserHelpPage.php" style = "color:orange"><h2 class ="product-category">Help Page and FAQs</h2></a>
+   <a href = "UserHelpPage.html" style = "color:orange"><h2 class ="product-category">Help Page and FAQs</h2></a>
    </section>';
   }
   
