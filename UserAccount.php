@@ -52,8 +52,11 @@ include("Authority.php");
    echo "<h1 class ='product-category'>" . $_SESSION["username"] . "</h1>";
    echo '<h1 class ="product-category" style = "color:orange"><b>Email: </b></h1>';
    echo "<h1 class ='product-category'>" . $_SESSION["email"] ."</h1>";
-   echo '<a href = "AdminAddProduct.php" style = "color:orange"><h2 class ="product-category">Add/Edit Product</h2></a>
-
+   echo '<a href = "AddProduct.php" style = "color:orange"><h2 class ="product-category">Add/Edit Product</h2></a>
+   <a href = "RemoveProduct.php" style = "color:orange"><h2 class ="product-category">Remove Product</h2></a>
+   <a href = "EditProduct.php" style = "color:orange"><h2 class ="product-category">Edit Product</h2></a>
+   <a href = "SetLayout.php" style = "color:orange"><h2 class ="product-category">Set Layout Theme</h2></a>
+   <a href = "EmailList.php" style = "color:orange"><h2 class ="product-category">List of registered usernames and emails</h2></a>
    <a href = "ActiveOrders.php" style = "color:orange"><h2 class ="product-category">View all orders</h2></a>
    <a href = "Cart.php" style = "color:orange"><h2 class ="product-category">Cart</h2></a>
    <!-- link to the monitoring page, to check whether the backend site features are down -->
