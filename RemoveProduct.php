@@ -20,7 +20,7 @@
         $itemname = mysqli_real_escape_string($conn, $itemname);
  
         $query    = "DELETE FROM Items WHERE name='$itemname'";
-        $result = mysqli_query($conn, $query) or die(mysql_error());
+        $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
          if ($result) {
             echo "<div class='form'>
                   <h3>Product Removed</h3><br/>

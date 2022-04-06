@@ -230,12 +230,11 @@
     font-size: 20px;
 }
 
-
 footer{
     position: relative;
     width: 100%;
-    padding: 40px 10vw;
-    padding-bottom: 80px;
+    padding: 30px 5vw;
+    padding-bottom: 60px;
     background: #FFB266;
 }
 
@@ -268,7 +267,7 @@ footer{
     text-transform: capitalize;
     color: #fff;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .category .footer-link{
@@ -318,3 +317,11 @@ footer{
     color: #fff;
     background: rgba(0, 0, 0, 0.2);
 }
+
+/* 2532x1170 pixels at 460ppi, used for iPhone 12, 12 Pro, and 13 */
+@media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+        
+    }

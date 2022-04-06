@@ -29,7 +29,7 @@
         die("Connection failed: " . $conn->connect_error);
         echo "<p>Status: down</p>";
     } else {
-        echo "<p>Status: up</p>";
+        echo "<p>Status: online</p>";
     }
     ?>
 </body>

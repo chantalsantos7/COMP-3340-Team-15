@@ -60,7 +60,7 @@ include("Authority.php");
   
   <footer id = "menu">
     <div class="footer-display">
-        <img src="shoazaLogo.png" class="logo" alt="">
+    <img src="images/shoazaLogo.png" class="logo" alt="Shoaza logo">
         <div class="footer-links">
             <ul class="category">
                 <li class="category-name">men</li>

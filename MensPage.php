@@ -60,21 +60,18 @@ include("Authority.php");
  </div>
 </section>
   
-  <footer id = "foot">
+<footer id = "foot">
     <div class="footer-display">
-        <img src="shoazaLogo.png" class="logo" alt="">
+        <img src="images/shoazaLogo.png" class="logo" alt="Shoaza logo">
         <div class="footer-links">
             <ul class="category">
                 <li class="category-name">men</li>
-
             </ul>
             <ul class="category">
                 <li class="category-name">women</li>
-   
           	</ul>
           <ul class="category">
                 <li class="category-name">kids</li>
-
             </ul>
         </div>
     </div>
