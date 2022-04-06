@@ -42,6 +42,7 @@ include("Authority.php");
    echo '<a href = "Cart.php" style = "color:orange"><h2 class ="product-category">My Cart</h2></a>
    <a href = "checkout.php" style = "color:orange"><h2 class ="product-category">Checkout</h2></a>
    <a href = "logout.php" style = "color:orange"><h2 class ="product-category">Logout</h2></a>
+   <a href = "UserHelpPage.php" style = "color:orange"><h2 class ="product-category">Help Page and FAQs</h2></a>
    </section>';
   }
   
