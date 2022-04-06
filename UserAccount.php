@@ -63,6 +63,7 @@ include("Authority.php");
    <a href = "Cart.php" style = "color:orange"><h2 class ="product-category">Cart</h2></a>
    <!-- link to the monitoring page, to check whether the backend site features are down -->
    <a href="monitoringpage.php" style = "color:orange"><h2 class="product-category">Monitor site features</h2></a>
+   <a href = "AdminHelpPage.html" style = "color:orange"><h2 class ="product-category">Admin Help Page</h2></a>
    <a href = "logout.php" style = "color:orange"><h2 class ="product-category">Logout</h2></a>
    </section>'; 
   }
