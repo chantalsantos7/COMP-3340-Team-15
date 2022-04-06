@@ -3,7 +3,7 @@
 <head>
 	<meta name="author" content="Ryan Filbey">
 	<meta name="description" content="Assignment8">
-	<meta name="keywords" content="Shoaza, searchPage, Mens, Womens, Kids, Shoes, Store, Top, Rated, search, Page">
+	<meta name="keywords" content="Shoaza, Shoes, Mens, Womens, Kids, Store, Top, Rated, search, Page">
   <link rel="stylesheet" href="SearchPage.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src = "AddToCartButton.js" ></script>
@@ -13,19 +13,11 @@
 
 <body>
   
-<nav class = id = "menu">
+<nav class = "menu" id = "menu">
   <?php 
   include("topNavMenu.php");
   ?>
 </nav>
-  
-  <ul class="links-row">
-    <li class="link-name"><a href="HomePage.php" class="link">home</a></li>
-    <li class="link-name"><a href="MensPage.php" class="link">mens</a></li>
-    <li class="link-name"><a href="WomensPage.php" class="link">womens</a></li>
-    <li class="link-name"><a href="KidsPage.php" class="link">kids</a></li>
-    <li class="link-name"><a href="HomePage.php#topRated" class="link">top rated</a></li>
-</ul>
 </nav>
 	
 <?php
@@ -33,11 +25,35 @@ include("Authority.php");
     $auth = $authLevel;
 ?>  
   
- 
 <section class="product" id = "ProductSearch">
     <h2 class="product-category">Search results</h2>
 
 <div class="product-row">
+<?php
+include("connect-db.php");
+$search = $_GET['search'];
+$sql_select = "SELECT * FROM `Items` WHERE `brand` = \"$search\";";
+        $result = $conn->query($sql_select);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+
+                echo '<div class="product-display">
+                <div class="product-image">
+                    <span class="star-rating">5 Stars</span>
+                    <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><img src="' . $row["img_path"] .'" class="product-pic" alt=""></a>
+                    <button class="display-button" onclick = "addToCartButton()">add to cart</button>
+                    <input type="hidden" name="itemID" value=' . $row["itemID"] . '>
+                </div>
+                <div class="product-info">
+                <a href="ProductCloseUp.php?itemID=' . $row["itemID"] . '"><h2 class="product-brand">' . $row["brand"] . '</h2></a>
+                    <p class= "product-name">' . $row["name"] .'</p>
+                    <span class="price">$'. $row["price"] .'</span>
+                </div>
+            </div>';
+            }
+        }
+        $conn->close();
+?> 
     <div class="product-display">
         <div class="product-image">
             <span class="star-rating">5 Stars</span>

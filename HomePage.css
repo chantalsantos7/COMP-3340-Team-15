@@ -30,12 +30,15 @@
 }
 
 .search{
-    width: 500px;
     display: flex;
+    align-items: stretch;
+}
+
+.search-form {
+    align-items: stretch;
 }
 
 .search-field{
-    width: 80%;
     height: 40px;
     padding: 10px;
     border-top-left-radius: 10px;
@@ -45,10 +48,11 @@
     background: none;
     color: #a9a9a9;
     outline: none;
+    flex-grow: 2;
 }
 
 .search-button{
-    width: 20%;
+    flex-grow: 1;
     height: 40px;
     padding: 10px 20px;
     border: none;

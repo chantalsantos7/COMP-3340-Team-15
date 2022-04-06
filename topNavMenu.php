@@ -4,8 +4,10 @@ echo '
 <img src="images/shoazaLogo.png" class="logo" alt="">
 <div class="nav-items">
   <div class="search">
-        <input type="text" id = "search" class="search-field" placeholder="search brand, product">
-        <button class="search-button" id = "searchbtn" onclick = "location.href = `Search.php`" >search</button>
+        <form method="get" action="Search.php" class="search-form">
+        <input type="text" id="search" name="search" class="search-field" placeholder="search brand">
+        <input class="search-button" id = "searchbtn" type="submit" value="Search">
+        </form>
     </div>
     <a href="UserAccount.php"><img src="images/user.png" alt=""></a>
     <a href="#" onclick = "navCartImage()" ><img src="images/cart.png" alt=""></a>

@@ -58,7 +58,7 @@ include("Authority.php");
  </div>
 </section>
   
-  <footer id = "menu">
+<footer id = "menu">
     <div class="footer-display">
     <img src="images/shoazaLogo.png" class="logo" alt="Shoaza logo">
         <div class="footer-links">

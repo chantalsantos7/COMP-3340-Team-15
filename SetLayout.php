@@ -18,14 +18,9 @@
   
 <nav class = "menu" id = "menu">
 <div class="topnav">
-    <img src="shoazaLogo.png" class="logo" alt="">
-    <div class="nav-items">
-      <div class="search">
-            <input type="text" id = "search" class="search-field" placeholder="search brand, product">
-            <button class="search-button" id = "searchbtn" onclick = "location.href = 'Search.php'" >search</button>
-        </div>
-        <a href="UserAccount.php"><img src="user.png" alt=""></a>
-        <a href="#" onclick = "navCartImage()" ><img src="cart.png" alt=""></a>
+  <?php
+  include("topNavMenu.php")
+  ?> 
     </div>
 </div>
   
@@ -64,7 +59,7 @@ include("Authority.php");
   
   <footer id = "foot">
     <div class="footer-display">
-        <img src="shoazaLogo.png" class="logo" alt="">
+    <img src="images/shoazaLogo.png" class="logo" alt="Shoaza logo">
         <div class="footer-links">
             <ul class="category">
                 <li class="category-name">men</li>
