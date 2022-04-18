@@ -27,7 +27,7 @@ include("Authority.php");
   
   <header class="body-picture">
     <div class="content">
-        <img src="shoazaLogo.png" class="logo" alt="">
+        <img src="images/shoazaLogo.png" class="logo" alt="">
         <p class="slogan">High quality shoes, at an affordable price!</p>
     </div>
 </header>

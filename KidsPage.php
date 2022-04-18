@@ -21,8 +21,8 @@
             <input type="text" id = "search" class="search-field" placeholder="search brand, product">
             <button class="search-button" id = "searchbtn" onclick = "location.href = 'Search.html'" >search</button>
         </div>
-        <a href="UserAccount.php"><img src="user.png" alt=""></a>
-        <a href="#" onclick = "navCartImage()" ><img src="cart.png" alt=""></a>
+        <a href="UserAccount.php"><img src="images/user.png" alt=""></a>
+        <a href="#" onclick = "navCartImage()" ><img src="images/cart.png" alt=""></a>
     </div>
 </div>
   
