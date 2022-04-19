@@ -146,6 +146,7 @@ $conn->close();
     <div class="footer-other-links">
         <div>
             <a href="sitemap.html" class="sitemap-link">sitemap</a>
+		<a href = "OpenData.html" class= "sitemap-link">Height and Shoe Size data set</a>
         </div>
     </div>
     <p class="footer-ending">Shoaza online store</p>
